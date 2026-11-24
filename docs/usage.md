@@ -3,7 +3,7 @@ title: Using Ray with Rust
 weight: 4
 ---
 
-This page covers how to use Ray with Rust. There are many different methods available, and this page attempts to show most of them. It follows the [PHP usage guide](https://myray.app/docs/php/vanilla-php/usage). See the [API reference](https://docs.rs/spatie-ray) for a full list of methods.
+This page covers sending values to Ray, formatting output and controlling a debugging session. See the [API reference](https://docs.rs/spatie-ray) for a full list of methods.
 
 ## Basic output
 
@@ -31,7 +31,7 @@ ray!("as", "many", "arguments", "as", "you", "like")?;
 # }
 ```
 
-Values must implement `serde::Serialize`. Derive it on your own types, or use `ray!().debug(&value)` for a type implementing `Debug`. Rust arrays, structs and floating-point values use Ray's native JSON renderer instead of PHP's reflection-based HTML dump. [Compatibility](compatibility.md) records the differences.
+Values must implement `serde::Serialize`. Derive it on your own types, or use `ray!().debug(&value)` for a type implementing `Debug`. Arrays, structs and floating-point values use Ray's native JSON renderer.
 
 ## Customizing output
 
@@ -71,7 +71,7 @@ ray!("this is gray")?.gray()?;
 # }
 ```
 
-Like PHP, `yellow()` sends the `orange` color. `grey()` is an alias for `gray()`.
+`yellow()` sends the `orange` color supported by Ray. `grey()` is an alias for `gray()`.
 
 ### Using sizes
 
@@ -117,7 +117,7 @@ ray!().table_with_label(["John", "Paul", "George", "Ringo"], "Beatles")?;
 # }
 ```
 
-Nested table cells are escaped, preformatted JSON. Top-level strings, integers, booleans and null match PHP's table payloads.
+Nested table cells are escaped, preformatted JSON. Top-level strings, integers, booleans and null are sent as scalar cells.
 
 ## Output formats
 
@@ -133,7 +133,7 @@ ray!().to_json(json!({"a": 1, "b": {"c": 3}}))?;
 # }
 ```
 
-You can send a valid JSON string to Ray with the `json` function. It will be displayed using Ray's JSON renderer. Unlike PHP's `json`, invalid JSON returns an error instead of displaying null.
+You can send a valid JSON string to Ray with the `json` function. It will be displayed using Ray's JSON renderer. Invalid JSON returns an error.
 
 ```rust
 # fn main() -> Result<(), spatie_ray::Error> {
@@ -148,7 +148,7 @@ Rust has no variadic methods. Chain `to_json` or `json` for multiple values, or 
 
 ### Working with XML
 
-You can send a valid XML string to Ray with the `xml` function. It will be displayed as formatted XML. Invalid XML returns an error. XML entity spelling and declarations may differ from PHP's DOM formatter for complex documents.
+You can send a valid XML string to Ray with the `xml` function. It will be displayed as formatted XML. Invalid XML returns an error.
 
 ```rust
 # fn main() -> Result<(), spatie_ray::Error> {
@@ -186,7 +186,7 @@ ray!().image("aGVsbG8=")?;
 # }
 ```
 
-The short base64 examples demonstrate transport syntax, not a valid image. Supply actual image bytes when displaying one. Like PHP, base64 input is sent with an `image/png` data prefix, even when the supplied data prefix used another image type.
+The short base64 examples demonstrate transport syntax, not a valid image. Supply PNG image bytes when displaying one; base64 input is sent with an `image/png` data prefix.
 
 ### Displaying a link
 
@@ -246,7 +246,7 @@ ray!().class_name(&an_object)?;
 
 ### Showing raw values
 
-Use `raw` to bypass specialized boolean/null handling. Structured values use preformatted JSON, not PHP's private-property reflection. For `Debug`-only values, use `debug`.
+Use `raw` to bypass specialized boolean/null handling. Structured values use preformatted JSON. For `Debug`-only values, use `debug`.
 
 ```rust
 # fn main() -> Result<(), spatie_ray::Error> {
@@ -256,8 +256,6 @@ ray!().debug(&std::time::Duration::from_millis(25))?;
 # Ok(())
 # }
 ```
-
-PHP runtime information, Carbon-specific formatting and private-property invasion have no direct Rust equivalent and are intentionally omitted.
 
 ## Caller & stack trace
 
@@ -329,7 +327,7 @@ ray!().measure_with(|| {
 # }
 ```
 
-Durations are measured with a monotonic clock and sent in milliseconds, like PHP. PHP heap-memory measurements are not portable to Rust; the corresponding protocol fields are zero. Panics in the closure are not caught.
+Durations are measured with a monotonic clock and sent in milliseconds. Memory usage is not measured; the corresponding protocol fields are zero. Panics in the closure are not caught.
 
 ## Limiting output
 
@@ -349,7 +347,7 @@ for i in 1..=10 {
 # }
 ```
 
-If the limit is zero or negative, limiting is disabled. Like PHP, each chained request, including color and label changes, consumes one allowance. The first limit for a source location is retained for the life of the client.
+If the limit is zero or negative, limiting is disabled. Each chained request, including color and label changes, consumes one allowance. The first limit for a source location is retained for the life of the client.
 
 ### Using a rate limiter
 
@@ -367,7 +365,7 @@ client.clear_rate_limits()?;
 # }
 ```
 
-Ray displays one notification when a limit is reached. `None` disables a particular rate limit. Per-second limits use a sliding one-second window. Failed network sends count toward limits, matching PHP's attempt-based behavior.
+Ray displays one notification when a limit is reached. `None` disables a particular rate limit. Per-second limits use a sliding one-second window. Failed network sends count toward limits.
 
 ### Sending a payload once
 
@@ -433,7 +431,7 @@ ray!().exception(&error)?;
 # }
 ```
 
-This sends the Rust type name, message, source chain and an observation-site stack trace. Rust errors do not retain PHP-style throw sites or snippets. Handle `Result` with ordinary Rust control flow; deferred exception queues and shutdown rethrows are not emulated.
+This sends the Rust type name, message, source chain and an observation-site stack trace. Handle `Result` with ordinary Rust control flow.
 
 ## Updating & removing items
 

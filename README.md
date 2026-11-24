@@ -40,7 +40,7 @@ ray!("John", "Paul", "George", "Ringo")?.label("Beatles")?;
 
 `ray!` captures the call's file and line. `ray!()` starts an empty entry; `ray!(value, ...)` sends one payload per value and returns `Result<Ray, Error>`. Fluent updates keep the same UUID. Transport errors are ignored by default, so a closed Ray app does not break your application. Serialization errors are returned.
 
-Structured Rust values use Serde and Ray's native JSON renderer, not PHP's reflection-based dumper. Use `debug(&value)` for `Debug`-only types. See the [usage guide](https://github.com/spatie/ray-rust/blob/main/docs/usage.md), [configuration](https://github.com/spatie/ray-rust/blob/main/docs/configuration.md) and [PHP parity record](https://github.com/spatie/ray-rust/blob/main/docs/compatibility.md) for differences and omissions.
+Structured values use Serde and Ray's native JSON renderer. Use `debug(&value)` for `Debug`-only types. See the [usage guide](https://github.com/spatie/ray-rust/blob/main/docs/usage.md) and [configuration](https://github.com/spatie/ray-rust/blob/main/docs/configuration.md).
 
 The default connection is `localhost:23517`, with a two-second timeout. For another host, environment configuration, error reporting, or an isolated session:
 

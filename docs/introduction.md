@@ -16,4 +16,4 @@ ray!("Hello world")?.green()?;
 
 Continue with [installation](installation-and-setup.md) and [usage](usage.md).
 
-This port follows the framework-agnostic PHP client's methods and payloads. Rust-specific differences and intentionally omitted PHP features are listed in [compatibility](compatibility.md).
+Send structured values with Serde, or use `debug` for `Debug`-only types. Configure explicit clients when you need isolated sessions.

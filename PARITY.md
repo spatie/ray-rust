@@ -1,5 +1,5 @@
 ---
-title: PHP compatibility
+title: Internal protocol comparison
 weight: 6
 ---
 
@@ -34,7 +34,7 @@ The reference is [spatie/ray at dd0a280](https://github.com/spatie/ray/tree/dd0a
 - **Custom payloads:** `Payload::new`, `send_request`. Verification: HTTP extension-payload test.
 - **Returning values:** `pass`. Verification: Executed rustdoc assertion.
 
-The reproducible comparison in `tests/protocol/compare.py` runs the real PHP and Rust clients against local HTTP capture servers. It compares payload content and UUID relationships, removing only runtime-specific origin and language/version metadata. `tests/fixtures/php-wire.json` stores the PHP capture for normal Rust-only CI. See [testing](testing.md) to regenerate and compare it.
+The reproducible comparison in `tests/protocol/compare.py` runs the real PHP and Rust clients against local HTTP capture servers. It compares payload content and UUID relationships, removing only runtime-specific origin and language/version metadata. `tests/fixtures/php-wire.json` stores the PHP capture for normal Rust-only CI. Run the comparison script with `--help` for fixture-generation options. See [testing](docs/testing.md) for Rust checks.
 
 These checks establish wire compatibility, not desktop rendering or a real user's interaction with the Ray app. The desktop app has not been exercised by this test suite.
 
