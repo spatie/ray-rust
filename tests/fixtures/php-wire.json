@@ -1,0 +1,988 @@
+[
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "log",
+        "content": {
+          "values": [
+            "Hello world"
+          ],
+          "meta": [
+            {
+              "clipboard_data": "Hello world"
+            }
+          ]
+        }
+      },
+      {
+        "type": "log",
+        "content": {
+          "values": [
+            42
+          ],
+          "meta": [
+            {
+              "clipboard_data": "42"
+            }
+          ]
+        }
+      },
+      {
+        "type": "custom",
+        "content": {
+          "content": true,
+          "label": "Boolean"
+        }
+      },
+      {
+        "type": "custom",
+        "content": {
+          "content": null,
+          "label": "Null"
+        }
+      },
+      {
+        "type": "custom",
+        "content": {
+          "content": false,
+          "label": "Boolean"
+        }
+      },
+      {
+        "type": "log",
+        "content": {
+          "values": [
+            0
+          ],
+          "meta": [
+            {
+              "clipboard_data": "0"
+            }
+          ]
+        }
+      },
+      {
+        "type": "log",
+        "content": {
+          "values": [
+            ""
+          ],
+          "meta": [
+            {
+              "clipboard_data": ""
+            }
+          ]
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "color",
+        "content": {
+          "color": "green"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "color",
+        "content": {
+          "color": "orange"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "color",
+        "content": {
+          "color": "orange"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "color",
+        "content": {
+          "color": "red"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "color",
+        "content": {
+          "color": "purple"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "color",
+        "content": {
+          "color": "blue"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "color",
+        "content": {
+          "color": "gray"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "color",
+        "content": {
+          "color": "gray"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "size",
+        "content": {
+          "size": "sm"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "size",
+        "content": {
+          "size": "lg"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "label",
+        "content": {
+          "label": "Beatles"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "log",
+        "content": {
+          "values": [
+            "updated"
+          ],
+          "meta": [
+            {
+              "clipboard_data": "updated"
+            }
+          ]
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "hide",
+        "content": []
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "remove",
+        "content": []
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "new_screen",
+        "content": {
+          "name": "My debug screen"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "screen_color",
+        "content": {
+          "color": "green"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "screen_color",
+        "content": {
+          "color": "orange"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "screen_color",
+        "content": {
+          "color": "red"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "screen_color",
+        "content": {
+          "color": "purple"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "screen_color",
+        "content": {
+          "color": "blue"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "screen_color",
+        "content": {
+          "color": "gray"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "new_screen",
+        "content": {
+          "name": ""
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "clear_all",
+        "content": []
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "separator",
+        "content": []
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "notify",
+        "content": {
+          "value": "This is my notification"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "confetti",
+        "content": []
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "show_app",
+        "content": []
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "hide_app",
+        "content": []
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "custom",
+        "content": {
+          "content": "<b>Bold string</b>",
+          "label": "HTML"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "custom",
+        "content": {
+          "content": "&nbsp;&nbsp;&lt;em&gt;A&nbsp;&amp;&nbsp;B&apos;s&nbsp;&quot;text&quot;&lt;/em&gt;<br>&nbsp;&nbsp;&nbsp;preserved",
+          "label": "Text"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "custom",
+        "content": {
+          "content": "my custom content",
+          "label": "hey"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "custom",
+        "content": {
+          "content": "<a href='https://spatie.be'>Spatie homepage</a>",
+          "label": "HTML"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "table",
+        "content": {
+          "values": {
+            "First": "First value",
+            "Second": 2,
+            "Third": true,
+            "Last": null
+          },
+          "label": "Table"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "table",
+        "content": {
+          "values": [
+            "John",
+            "Paul",
+            "George",
+            "Ringo"
+          ],
+          "label": "Beatles"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "json_string",
+        "content": {
+          "value": "{\"a\":1,\"b\":{\"c\":3},\"url\":\"https:\\/\\/spatie.be\",\"name\":\"Zo\\u00eb \\ud83c\\udf89\"}"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "custom",
+        "content": {
+          "content": "<img src=\"https://placekitten.com/200/300\" alt=\"\" />",
+          "label": "Image"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "custom",
+        "content": {
+          "content": "<img src=\"data:image/png;base64,aGVsbG8=\" alt=\"\" />",
+          "label": "Image"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "custom",
+        "content": {
+          "content": "<img src=\"data:image/png;base64,aGVsbG8=\" alt=\"\" />",
+          "label": "Image"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "expand",
+        "content": {
+          "keys": [],
+          "level": 3
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "expand",
+        "content": {
+          "keys": [
+            "myKey",
+            "anotherKey.nestedKey"
+          ],
+          "level": null
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "expand",
+        "content": {
+          "keys": [],
+          "level": 999
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "log",
+        "content": {
+          "values": [
+            true
+          ],
+          "meta": [
+            {
+              "clipboard_data": "[],"
+            }
+          ]
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "log",
+        "content": {
+          "values": [
+            null
+          ],
+          "meta": [
+            {
+              "clipboard_data": "[],"
+            }
+          ]
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "log",
+        "content": {
+          "values": [
+            "raw"
+          ],
+          "meta": [
+            {
+              "clipboard_data": "[],"
+            }
+          ]
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "log",
+        "content": {
+          "values": [
+            "11111111111111111"
+          ],
+          "meta": [
+            {
+              "clipboard_data": "11111111111111111"
+            }
+          ]
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "custom",
+        "content": {
+          "content": "&lt;?xml&nbsp;version=&quot;1.0&quot;?&gt;<br>&lt;one&gt;<br>&nbsp;&nbsp;&lt;two&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;three&gt;3&lt;/three&gt;<br>&nbsp;&nbsp;&lt;/two&gt;<br>&lt;/one&gt;",
+          "label": "XML"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "custom",
+        "content": {
+          "content": "&lt;?xml&nbsp;version=&quot;1.0&quot;?&gt;<br>&lt;one/&gt;",
+          "label": "XML"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "custom",
+        "content": {
+          "content": "&lt;b&gt;Hello &amp; &quot;Ray&quot;&lt;/b&gt;<br />Next line<br />",
+          "label": "content.txt"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "custom",
+        "content": {
+          "content": "File not found: 'tests/fixtures/missing.txt'",
+          "label": "File"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "custom",
+        "content": {
+          "content": "shown",
+          "label": "Text"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 0,
+    "payloads": [
+      {
+        "type": "remove",
+        "content": []
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 1,
+    "payloads": [
+      {
+        "type": "custom",
+        "content": {
+          "content": "Called `first` 1 time.",
+          "label": "Count"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 1,
+    "payloads": [
+      {
+        "type": "custom",
+        "content": {
+          "content": "Called `first` 2 times.",
+          "label": "Count"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 2,
+    "payloads": [
+      {
+        "type": "custom",
+        "content": {
+          "content": "Called `second` 1 time.",
+          "label": "Count"
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 3,
+    "payloads": [
+      {
+        "type": "log",
+        "content": {
+          "values": [
+            1
+          ],
+          "meta": [
+            {
+              "clipboard_data": "1"
+            }
+          ]
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 4,
+    "payloads": [
+      {
+        "type": "log",
+        "content": {
+          "values": [
+            2
+          ],
+          "meta": [
+            {
+              "clipboard_data": "2"
+            }
+          ]
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 5,
+    "payloads": [
+      {
+        "type": "log",
+        "content": {
+          "values": [
+            1
+          ],
+          "meta": [
+            {
+              "clipboard_data": "1"
+            }
+          ]
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 6,
+    "payloads": [
+      {
+        "type": "log",
+        "content": {
+          "values": [
+            "last allowed"
+          ],
+          "meta": [
+            {
+              "clipboard_data": "last allowed"
+            }
+          ]
+        }
+      }
+    ],
+    "meta": {
+      "project_name": "Protocol"
+    }
+  },
+  {
+    "uuid": 7,
+    "payloads": [
+      {
+        "type": "custom",
+        "content": {
+          "content": "Rate limit has been reached...",
+          "label": "Rate limit"
+        }
+      }
+    ],
+    "meta": []
+  }
+]

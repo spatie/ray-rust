@@ -1,6 +1,6 @@
 ---
 title: v1
-slogan: {{description_quoted}}
-githubUrl: https://github.com/{{owner}}/{{repository}}
+slogan: "Send debug output from Rust to the Ray desktop app"
+githubUrl: https://github.com/spatie/ray-rust
 branch: main
 ---

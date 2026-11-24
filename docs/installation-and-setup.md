@@ -3,17 +3,25 @@ title: Installation
 weight: 3
 ---
 
-Requires Rust 1.89 or newer. Install Rust using [rustup](https://rustup.rs/).
+This package can be installed in any Rust application.
 
-Once the crate is published, add it to your application:
+Requires Rust 1.89 or newer. Install Rust using [rustup](https://rustup.rs/), and download the [Ray desktop app](https://myray.app).
+
+Add the package to your application:
 
 ```sh
-cargo add {{crate_name}}
+cargo add spatie-ray
 ```
 
-Before publication, use a local path dependency:
+Open Ray, then send your first message:
 
-```toml
-[dependencies]
-{{crate_name}} = { path = "../{{repository}}" }
+```rust
+# fn main() -> Result<(), spatie_ray::Error> {
+use spatie_ray::ray;
+
+ray!("Hello world")?;
+# Ok(())
+# }
 ```
+
+Ray listens on `localhost:23517` by default. See [configuration](configuration.md) for remote hosts and path mapping. No PHP installation or async runtime is needed.

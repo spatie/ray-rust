@@ -29,18 +29,6 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt, clippy
-      - uses: actions/setup-python@v6
-        if: hashFiles('configure.py') != ''
-        with:
-          python-version: '3.11'
-      - name: Test template configurator
-        if: hashFiles('configure.py') != ''
-        run: python -m unittest discover -s tests -p 'test_configure.py' -v
-      - name: Configure template sample
-        if: hashFiles('configure.py') != ''
-        run: |
-          python configure.py --defaults --no-check
-          cargo generate-lockfile
       - uses: Swatinem/rust-cache@v2
       - run: cargo fmt --all -- --check
       - run: cargo clippy --locked --all-targets --all-features -- -D warnings
@@ -58,11 +46,6 @@ jobs:
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: 1.89.0
-      - name: Configure template sample
-        if: hashFiles('configure.py') != ''
-        run: |
-          python3 configure.py --defaults --no-check
-          cargo generate-lockfile
       - uses: Swatinem/rust-cache@v2
       - run: cargo +1.89.0 test --locked --all-targets --all-features
       - run: cargo +1.89.0 test --locked --doc --all-features
@@ -74,11 +57,28 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: dtolnay/rust-toolchain@stable
-      - name: Configure template sample
-        if: hashFiles('configure.py') != ''
-        run: |
-          python3 configure.py --defaults --no-check
-          cargo generate-lockfile
       - uses: Swatinem/rust-cache@v2
       - run: cargo install cargo-audit --locked
       - run: cargo audit
+
+  protocol:
+    name: PHP protocol compatibility
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7
+        with:
+          repository: spatie/ray
+          ref: dd0a28063c15e847f5d67a5855c97c273ddfe693
+          path: .php-ray
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: curl, dom, mbstring
+          tools: composer
+          coverage: none
+      - run: composer install --working-dir=.php-ray --no-dev --prefer-dist --no-interaction
+      - run: python3 tests/protocol/compare.py --php-root .php-ray

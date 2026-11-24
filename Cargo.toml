@@ -1,19 +1,33 @@
 [package]
-name = {{crate_name_quoted}}
-version = "0.1.0"
+name = "spatie-ray"
+version = "1.0.0"
 edition = "2024"
 rust-version = "1.89"
-authors = [{{author_quoted}}]
-description = {{description_quoted}}
+authors = ["Freek Van der Herten <freek@spatie.be>"]
+description = "Send debug output from Rust to the Ray desktop app"
 license = "MIT"
-repository = "https://github.com/{{owner}}/{{repository}}"
-documentation = "https://docs.rs/{{crate_name}}"
+repository = "https://github.com/spatie/ray-rust"
+documentation = "https://docs.rs/spatie-ray"
 readme = "README.md"
-keywords = ["spatie"]
-categories = ["development-tools"]
-include = ["/src/", "/tests/*.rs", "/build.rs", "/docs/", "/README.md", "/LICENSE.md", "/CHANGELOG.md", "/CONTRIBUTING.md", "/SECURITY.md", "/Cargo.lock"]
+keywords = ["spatie", "ray", "debugging", "logging"]
+categories = ["development-tools::debugging"]
+include = ["/src/", "/tests/", "/examples/", "/build.rs", "/docs/", "/README.md", "/LICENSE.md", "/CHANGELOG.md", "/CONTRIBUTING.md", "/SECURITY.md", "/Cargo.lock"]
 
 [dependencies]
+backtrace = "0.3"
+base64 = "0.22"
+hostname = "0.4"
+percent-encoding = "2"
+quick-xml = "0.41"
+roxmltree = "0.21"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+thiserror = "2"
+ureq = { version = "3", default-features = false, features = ["json"] }
+uuid = { version = "1", features = ["v4"] }
+
+[dev-dependencies]
+tiny_http = "0.12"
 
 [lints.rust]
 unsafe_code = "forbid"
