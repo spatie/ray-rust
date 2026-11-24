@@ -1,4 +1,4 @@
-# spatie/ray - Send debug output from PHP to Ray
+# Send debug output from Rust to Ray
 
 [![Latest version on crates.io](https://img.shields.io/crates/v/spatie-ray.svg?style=flat-square)](https://crates.io/crates/spatie-ray)
 [![Tests](https://img.shields.io/github/actions/workflow/status/spatie/ray-rust/ci.yml?branch=main&style=flat-square)](https://github.com/spatie/ray-rust/actions/workflows/ci.yml)
