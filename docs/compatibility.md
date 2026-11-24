@@ -7,34 +7,32 @@ The reference is [spatie/ray at dd0a280](https://github.com/spatie/ray/tree/dd0a
 
 ## Implemented and exercised
 
-| PHP feature | Rust API | Verification |
-| --- | --- | --- |
-| `ray`, multiple values, updates | `ray!`, `send`, `send_many` | Captured PHP HTTP comparison; stable UUID and callsite tests |
-| Strings, integers, bool, null, large integers | `send` | Captured PHP comparison, including false, zero, empty string and null |
-| Colors, sizes, labels, collapse/remove | Snake-case methods, `color`, `size`, `label`, `hide`, `remove` | Captured PHP comparison |
-| Named/new/clear screens and screen colors | `new_screen`, `clear_screen`, `clear_all`, `screen_color` and shortcuts | Captured PHP comparison |
-| Notifications, confetti, separators, show/hide app | `notify`, `confetti`, `separator`, `show_app`, `hide_app` | Captured PHP comparison |
-| HTML, literal text, custom content | `html`, `text`, `send_custom` | Captured PHP comparison |
-| Links | `link`, `url` | Compared against the equivalent PHP HTML payload; Rust escapes attributes and labels |
-| Tables with primitive cells | `table`, `table_with_label` | Captured PHP comparison |
-| JSON representation | `to_json` | Captured PHP comparison, including Unicode and slash escaping |
-| Image URLs, base64/data URIs | `image` | Captured PHP comparison |
-| UTF-8 files and missing-file messages | `file` | Captured PHP comparison |
-| Simple formatted XML | `xml` | Captured PHP comparison of nested and empty elements |
-| Expansion controls | `expand`, `expand_keys`, `expand_all` | Captured PHP comparison of commands; actual expansion depends on the app's renderer |
-| Raw scalar values | `raw` | Captured PHP comparison |
-| Counters and counter identity | `count`, `count_named`, `counter_value`, `clear_counters` | Captured PHP comparison and independent-name/reset tests |
-| Conditional sending and removal | `when`, `when_with`, `show_if`, `remove_when` | Captured PHP comparison and gate/callback tests |
-| Enable/disable | `enable`, `disable`, `enabled`, `disabled` | Captured PHP comparison and isolated-client tests |
-| Per-callsite limits and once | `limit`, `once` | Captured PHP comparison and zero/negative/independent-callsite tests |
-| Global and per-second rate limits | `Client::max`, `per_second`, `clear_rate_limits` | Captured PHP total-limit comparison and sliding-window/recovery tests |
-| Timing | `measure`, `measure_with`, `stop_time` | HTTP tests of new timer, lap, positive elapsed time and reset |
-| Caller, trace and backtrace | `caller`, `trace`, `backtrace`, explicit `Frame` methods | HTTP tests of Rust symbols, frame schema and mapped paths |
-| Error display | `exception` | HTTP tests of message, frames and red styling |
-| Pause/Continue/Stop | `pause` | Fake-server tests of Continue, Stop and lock query metadata |
-| App queries | `Client::windows`, `theme` | HTTP query/error tests |
-| Custom payloads | `Payload::new`, `send_request` | HTTP extension-payload test |
-| Returning values | `pass` | Executed rustdoc assertion |
+- **`ray`, multiple values, updates:** `ray!`, `send`, `send_many`. Verification: Captured PHP HTTP comparison; stable UUID and callsite tests.
+- **Strings, integers, bool, null, large integers:** `send`. Verification: Captured PHP comparison, including false, zero, empty string and null.
+- **Colors, sizes, labels, collapse/remove:** Snake-case methods, `color`, `size`, `label`, `hide`, `remove`. Verification: Captured PHP comparison.
+- **Named/new/clear screens and screen colors:** `new_screen`, `clear_screen`, `clear_all`, `screen_color` and shortcuts. Verification: Captured PHP comparison.
+- **Notifications, confetti, separators, show/hide app:** `notify`, `confetti`, `separator`, `show_app`, `hide_app`. Verification: Captured PHP comparison.
+- **HTML, literal text, custom content:** `html`, `text`, `send_custom`. Verification: Captured PHP comparison.
+- **Links:** `link`, `url`. Verification: Compared against the equivalent PHP HTML payload; Rust escapes attributes and labels.
+- **Tables with primitive cells:** `table`, `table_with_label`. Verification: Captured PHP comparison.
+- **JSON representation:** `to_json`. Verification: Captured PHP comparison, including Unicode and slash escaping.
+- **Image URLs, base64/data URIs:** `image`. Verification: Captured PHP comparison.
+- **UTF-8 files and missing-file messages:** `file`. Verification: Captured PHP comparison.
+- **Simple formatted XML:** `xml`. Verification: Captured PHP comparison of nested and empty elements.
+- **Expansion controls:** `expand`, `expand_keys`, `expand_all`. Verification: Captured PHP comparison of commands; actual expansion depends on the app's renderer.
+- **Raw scalar values:** `raw`. Verification: Captured PHP comparison.
+- **Counters and counter identity:** `count`, `count_named`, `counter_value`, `clear_counters`. Verification: Captured PHP comparison and independent-name/reset tests.
+- **Conditional sending and removal:** `when`, `when_with`, `show_if`, `remove_when`. Verification: Captured PHP comparison and gate/callback tests.
+- **Enable/disable:** `enable`, `disable`, `enabled`, `disabled`. Verification: Captured PHP comparison and isolated-client tests.
+- **Per-callsite limits and once:** `limit`, `once`. Verification: Captured PHP comparison and zero/negative/independent-callsite tests.
+- **Global and per-second rate limits:** `Client::max`, `per_second`, `clear_rate_limits`. Verification: Captured PHP total-limit comparison and sliding-window/recovery tests.
+- **Timing:** `measure`, `measure_with`, `stop_time`. Verification: HTTP tests of new timer, lap, positive elapsed time and reset.
+- **Caller, trace and backtrace:** `caller`, `trace`, `backtrace`, explicit `Frame` methods. Verification: HTTP tests of Rust symbols, frame schema and mapped paths.
+- **Error display:** `exception`. Verification: HTTP tests of message, frames and red styling.
+- **Pause/Continue/Stop:** `pause`. Verification: Fake-server tests of Continue, Stop and lock query metadata.
+- **App queries:** `Client::windows`, `theme`. Verification: HTTP query/error tests.
+- **Custom payloads:** `Payload::new`, `send_request`. Verification: HTTP extension-payload test.
+- **Returning values:** `pass`. Verification: Executed rustdoc assertion.
 
 The reproducible comparison in `tests/protocol/compare.py` runs the real PHP and Rust clients against local HTTP capture servers. It compares payload content and UUID relationships, removing only runtime-specific origin and language/version metadata. `tests/fixtures/php-wire.json` stores the PHP capture for normal Rust-only CI. See [testing](testing.md) to regenerate and compare it.
 
